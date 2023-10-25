@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bullet-one {
+  animation-delay: 0.1s;
+}
+.bullet-two {
+  animation-delay: 0.2s;
+}
+.bullet-three {
+  animation-delay: 0.3s;
+}
