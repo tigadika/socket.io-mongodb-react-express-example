@@ -9,13 +9,13 @@ import ProfileBanner from "./ProfileBanner";
 import MessageList from "./ChatArea/MessageList";
 import MessageInput from "./ChatArea/MessageInput";
 
+const socket = io.connect(":3000");
 export default function ChatRoom({ roomId, targetProfile }) {
   const [messages, setMessages] = useState([]);
   const [isTyping, setIsTyping] = useState(false);
   const { user } = useIsLogin();
   let timeIn;
   let timeOut;
-  const socket = io.connect(":3000");
 
   const handleSubmit = (e, input, ref) => {
     e.preventDefault();
