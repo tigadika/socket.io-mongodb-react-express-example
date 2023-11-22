@@ -18,7 +18,13 @@ export default function MessageInput({ onSubmit, onTyping }) {
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form
+      onSubmit={(event) => {
+        event.preventDefault();
+        onSubmit(getMessageContent());
+        messageRef.current.innerHTML = "";
+      }}
+    >
       <div className="flex justify-between py-2 gap-3">
         <div
           contentEditable="true"

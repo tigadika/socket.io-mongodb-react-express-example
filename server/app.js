@@ -117,6 +117,7 @@ const io = new Server(server, {
 
 //? handler for socket.io
 io.on("connection", async (socket) => {
+  console.log("a user connected");
   socket.on("disconnect", () => {
     console.log("a user disconnected");
   });

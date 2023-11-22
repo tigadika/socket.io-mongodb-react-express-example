@@ -17,8 +17,7 @@ export default function ChatRoom({ roomId, targetProfile }) {
   let timeIn;
   let timeOut;
 
-  const handleSubmit = (e, input, ref) => {
-    e.preventDefault();
+  const handleSubmit = (input, ref) => {
     const time = new Date()
       .toLocaleString("en-UK", { hour12: false })
       .replace(", ", "T");
@@ -31,7 +30,7 @@ export default function ChatRoom({ roomId, targetProfile }) {
     );
 
     // maybe it's not best practice
-    ref.current.innerHTML = "";
+    // ref.current.innerHTML = "";
   };
 
   const handleTyping = () => {
